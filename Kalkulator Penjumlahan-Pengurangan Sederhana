@@ -2,12 +2,13 @@ org 100h
 
 jmp start       ; jump ke deklarasi data
 
-        psn:    db      "1. Penjumlahan",0dh,0ah,"2. Pengurangan",0dh,0ah,"Masukkan angka 1 atau 2 untuk memilih operasi: $"
-        psn2:    db      0dh,0ah,"Masukkan Angka Pertama : $"
-        psn3:    db      0dh,0ah,"Masukkan Angka Kedua : $"
-        psn4:    db      0dh,0ah,"Error $" 
-        psn5:    db      0dh,0ah,"Hasil : $" 
-        psn6:    db      0dh,0ah ,'Terimakasih telah menggunakan kalkulator ini! Tekan apa saja untuk keluar... ', 0dh,0ah, '$'
+        psn :    db      "==================================================",0dh,0ah,"|                   KALKULATOR                   |",0dh,0ah,"==================================================",0dh,0ah,"| 1. Penjumlahan                                 |",0dh,0ah,"| 2. Pengurangan                                 |",0dh,0ah,"| Masukkan angka 1 atau 2 untuk memilih operasi: $"
+        psn2:    db      0dh,0ah,"==================================================",0dh,0ah,"| Masukkan Angka Pertama : $"
+        psn3:    db      0dh,0ah,"| Masukkan Angka Kedua : $"
+        psn4:    db      0dh,0ah,"==================================================",0dh,0ah,"| Error $" 
+        psn5:    db      0dh,0ah,"|",0dh,0ah,"| Hasil : $" 
+        psn6:    db      0dh,0ah,'| Terimakasih telah menggunakan kalkulator ini! Tekan apa saja untuk keluar... ', 0dh,0ah, '$'
+
 
 start:  mov ah,9
         mov dx, offset psn ;mencetak pesan pertama dimana user bisa memilih peng-operasian dengan int 21h
